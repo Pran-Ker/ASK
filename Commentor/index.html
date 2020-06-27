@@ -1,0 +1,66 @@
+<!--
+Copyright (c) 2016 - 2018 Daniel Routman
+passphrase.io v8.0.2
+Licensed under the MIT license
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>passphrase.io - private online notepad</title>
+	<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+	<link rel="prefetch" href="images/show.png">
+	<meta name="description" content="Enter a passphrase to store and retrieve your notepad from any web browser. All data is encrypted in your browser, so we have no way to view the contents of your notepad on our server."/>
+	<meta name="viewport" content="width=device-width, user-scalable=no"/>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://passphrase.io">
+	<meta name="twitter:title" content="passphrase.io - private online notepad">
+	<meta name="twitter:description" content="Enter a passphrase to store and retrieve your notepad from any web browser. All data is encrypted in your browser, so we have no way to view the contents of your notepad on our server.">
+	<meta name="twitter:image" content="http://passphrase.io/images/social.png">
+
+	<meta property="og:title" content="passphrase.io - private online notepad"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://passphrase.io"/>
+	<meta property="og:description" content="Enter a passphrase to store and retrieve your notepad from any web browser. All data is encrypted in your browser, so we have no way to view the contents of your notepad on our server."/>
+	<meta property="og:image" content="http://passphrase.io/images/facebook.png"/>
+
+	<link rel='stylesheet' href='css/monokai-sublime.min.css'/>
+	<link rel='stylesheet' href='css/quill.snow.css'/>
+	<link rel='stylesheet' href='css/style.css'/>
+
+</head>
+<body>
+	<div id="top-row">
+		<div id="header">
+			<div id="title">passphrase.io</div>
+			<div id="button">load</div>
+		</div>
+		<div id="phrase">
+				<div id="progressbar"></div>
+				<input id="passphrase" type="text" placeholder="enter a passphrase" autocapitalize="none" autocomplete="off">
+				<div id="hide"><img id="hide-icon" src="images/hide.png" style="max-width: 48px;"></div>
+		</div>
+	</div>
+	<div id="bottom-row">
+		<div id="notes">
+			<div id="list"></div>
+			<div id="add" class="disabled" style="display: block;"><span>+</span></div>
+		</div>
+		<div id="notepad-container">
+			<div id="notepad"></div>
+		</div>
+	</div>
+	<div id="confirm">
+		<div id="confirm-inner">
+			<p>are you sure you want to permanently delete</p>
+			<div id="confirm-notepad"></div>
+			<div id="confirm-yes" class="confirm-button">yes</div>
+			<div id="confirm-no" class="confirm-button">cancel</div>
+		</div>
+	</div>
+</body>
+<script src='js/script.js'></script>
+</html>
